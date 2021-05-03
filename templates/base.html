@@ -15,7 +15,7 @@
         <div class="container mx-auto mt-2 bg-gray-100  font-mono text-center shadow-2xl rounded-lg p-1">
             Your KEYS <<-|->> PRI -> pub
         </div>
-        <div class="container mx-auto mt-2 bg-gray-100  font-mono text-center shadow-2xl rounded-lg p-1">
+        <div class="container mx-auto mt-2 bg-gray-100  md:text-xl text-sm font-mono text-center shadow-2xl rounded-lg p-1">
             {% for i in client.pri_key_s().decode('utf-8').splitlines() if i %}
             {{i}}<br>
         {% endfor %}

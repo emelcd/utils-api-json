@@ -45,4 +45,5 @@ def wiki_Search(search):
     return render_template('wikie.html',x=x, search=search)
 
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
