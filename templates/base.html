@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='tail.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="bg-gray-400">
+    <div class="container mx-auto mt-2 bg-gray-100  font-mono text-center shadow-2xl rounded-lg p-1 ">
+        Your KEYS <<-|->> PRI -> pub
+    </div>
+    <div class="container mx-auto mt-2 bg-gray-100  font-mono text-center shadow-2xl rounded-lg p-1 ">
+        {% for i in client.pri_key_s().decode('utf-8').splitlines() if i %}
+        {{i}}<br>
+        {% endfor %}
+    </div>
+    <div class="container mx-auto mt-2 bg-gray-100  font-mono text-center shadow-2xl rounded-lg p-1 mb-2">
+        {% for i in client.pub_key_s().decode('utf-8').splitlines() %}
+        {{i}}<br>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
