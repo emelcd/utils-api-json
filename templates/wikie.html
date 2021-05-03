@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='tail.css') }}">
+
+</head>
+
+<body class="bg-gray-400">
+    <h1 class="text-center text-2xl font-mono uppercase ">{{search}}</h1>
+    {% for i in x %}
+    <div class="container bg-gray-200 mx-auto p-2 m-2">
+        <h3 class="font-bold uppercase text-center font-mono">
+            {{i.title}} 
+        </h3>
+        <a class="float-right text-md font-mono uppercase text-yellow-600" href="{{i.link}}">Full Content</a>
+        <br>
+        <p>
+            {{i.summary}}
+
+        </p>
+
+    </div>
+    {% endfor %}
+</body>
+
+</html>

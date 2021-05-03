@@ -3,6 +3,7 @@ from flask import Flask, render_template, send_file
 from string import ascii_letters
 from utils.cr import Client
 from utils.gr import graphing, graphing_random
+from utils.sc import searchingW
 app = Flask(__name__)
 
 app.jinja_env.globals.update(gauss=gauss)
@@ -29,6 +30,11 @@ def graphing_r():
         return send_file('tmp\graph.png')
     except:
         return render_template('index.html')
+
+@app.route('/wiki/<search>')
+def wiki_Search(search):
+    x = searchingW(search)
+    return render_template('wikie.html',x=x, search=search)
 
 
 app.run(debug=True)

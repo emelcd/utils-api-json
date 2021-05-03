@@ -13,6 +13,7 @@ def graphing(a=0,b=0,c=0,n=1,l=5):
     ax.spines['left'].set_position('zero')
     ax.spines['bottom'].set_position('zero')
     plt.savefig('tmp\graph.png')
+
 def graphing_random():
     x=np.linspace(-5,5,100)
     fig, ax = plt.subplots()
