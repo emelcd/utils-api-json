@@ -4,7 +4,7 @@ from string import ascii_letters
 from utils.cr import Client
 from utils.gr import graphing, graphing_random
 from utils.sc import searchingW
-from utils.rr import read_Readme
+from utils.rr import read_Readme, auto_Render
 app = Flask(__name__)
 
 app.jinja_env.globals.update(gauss=gauss)
@@ -12,6 +12,10 @@ app.jinja_env.globals.update(gauss=gauss)
 @app.route('/')
 def index():
     return render_template('index.html', content=read_Readme())
+
+@app.route('/render')
+def render_code():
+    return render_template('code.html', content=auto_Render())
 
 @app.route('/rsa/<passw>')
 def rsa(passw):
