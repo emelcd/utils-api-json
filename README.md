@@ -1,4 +1,3 @@
-<!-- font: din -->
 # API LOCALs
 
 ### Cryptographic Pair
