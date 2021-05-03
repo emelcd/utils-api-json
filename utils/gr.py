@@ -5,6 +5,9 @@ from matplotlib import rcParams
 rcParams['font.family'] = 'sans-serif'
 rcParams['font.sans-serif'] = ['Verdana']
 
+from random import gammavariate
+
+
 def graphing(a=0,b=0,c=0,n=1,l=10):
     x=np.linspace(-l,l,1000)
     y = a*x**n+b*x+c
