@@ -13,19 +13,19 @@ app.jinja_env.globals.update(gauss=gauss)
 def index():
     return render_template('index.html', content=read_Readme())
 
-@app.route('/render')
-def render_code():
-    return render_template('code.html', content=auto_Render())
+@app.route('/render/<fp>')
+def render_code(fp):
+    return render_template('code.html', content=auto_Render(fp))
 
 @app.route('/rsa/<passw>')
 def rsa(passw):
     return render_template('base.html', client=Client(passw))
 
 
-@app.route('/graph/<a>/<b>/<c>/<n>/<l>')
-def enc(a, b, c, n, l):
+@app.route('/graph/<a>/<b>/<c>/<n>')
+def enc(a, b, c, n):
     try:
-        graphing(int(a), int(b), int(c), int(n), int(l))
+        graphing(int(a), int(b), int(c), int(n))
         return send_file('tmp\graph.png')
     except:
         return render_template('index.html')

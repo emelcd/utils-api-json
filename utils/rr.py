@@ -6,9 +6,10 @@ def read_Readme():
         html = markdown.markdown(x)
     return html
 
-def auto_Render():
-    with open('./utils/cr.py') as f:
+def auto_Render(fp):
+    fp = './utils/'+fp+".py"
+    with open(fp) as f:
         x = f.read()
-        html = "<pre><code class='python'>"+x+"</pre></code>"
+        html = f"<pre><code class='python'>"+x+"</pre></code>"
     return html
         

@@ -5,13 +5,15 @@ from matplotlib import rcParams
 rcParams['font.family'] = 'sans-serif'
 rcParams['font.sans-serif'] = ['Verdana']
 
-def graphing(a=0,b=0,c=0,n=1,l=5):
+def graphing(a=0,b=0,c=0,n=1,l=10):
     x=np.linspace(-l,l,1000)
     y = a*x**n+b*x+c
     fig, ax = plt.subplots()
-    ax.plot(x, y, label=r"$ x^2 $")
+    ax.plot(x, y, label=r"$ ax^n+bx+c $")
     ax.spines['left'].set_position('zero')
     ax.spines['bottom'].set_position('zero')
+    ax.legend()
+    ax.grid(True)
     plt.savefig('tmp\graph.png')
 
 def graphing_random():
