@@ -11,7 +11,6 @@ def searchingW(sterm):
                 "title":i,
                 "summary":wikipedia.summary(i,sentences=2),
                 "link":wikipedia.page(i).url,
-                
             }
             pages_obj.append(me)
         except:
