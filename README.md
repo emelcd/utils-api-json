@@ -17,7 +17,7 @@
 >Render a file into Markdown/Code(highlight.js): 
 >>**/render/file**
 >>>{search:file or fp to render}<br>
->>>>{usable:rr,cr,sc,gr}
+>>>>{usable:rr,cr,sc,gr,PP}
 >>>>*/render/rr*
 
 ### Graph Creator ![eq](./static/img/graph.gif)

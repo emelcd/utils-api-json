@@ -25,7 +25,6 @@ def proc_image():
         f = request.files['file']
         f.save(f.filename)
         show_img(f)
-        sleep(1)
         rm(f.filename)
         return send_file('tmp\max.png')
 

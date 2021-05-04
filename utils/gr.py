@@ -28,7 +28,6 @@ def graphing_random():
     ax.set_ylim(-10,10)
     ax.set_xlim(-5,5)
     ax.set_title(r"$ax^e+bx+c$")
-    print(dir(ax))
     for i in range(-3,3):
         n = [-4,-3,-2,2,3,4]
         a = choice(n)
