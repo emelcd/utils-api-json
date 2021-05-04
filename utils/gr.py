@@ -24,11 +24,11 @@ def graphing(a=0,b=0,c=0,n=1,l=10):
 def graphing_random():
     x=np.linspace(-5,5,100)
     fig, ax = plt.subplots()
-    ax.spines['bottom'].set_position('zero')
-    ax.grid(True)
+    # ax.spines['bottom'].set_position('zero')
     ax.set_ylim(-10,10)
     ax.set_xlim(-5,5)
     ax.set_title(r"$ax^e+bx+c$")
+    print(dir(ax))
     for i in range(-3,3):
         n = [-4,-3,-2,2,3,4]
         a = choice(n)

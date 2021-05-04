@@ -32,4 +32,7 @@
 >>>{r:option}
 >>>>*/graph/r*
 
+### Image Black and White --> 
+>create black and white from a given
+>>**/upload**-->**/proccimg**
 
