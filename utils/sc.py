@@ -7,7 +7,7 @@ def searchingW(sterm):
         try:
             me = {
                 "title":i,
-                "summary":wikipedia.summary(i,sentences=2),
+                "summary":wikipedia.summary(i),
                 "link":wikipedia.page(i).url,
             }
             pages_obj.append(me)

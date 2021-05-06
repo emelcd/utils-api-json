@@ -13,7 +13,7 @@ class Client:
         self.pubS = self.pub_key_s()
         # self.save()
     def gen_key(self):
-        ky_size = 2048
+        ky_size = 4096
         pri = rsa.generate_private_key(65537, key_size=ky_size)
         return pri
     def pri_key_s(self):
